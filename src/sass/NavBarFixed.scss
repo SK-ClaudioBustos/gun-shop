@@ -1,0 +1,27 @@
+$red: #e63946;
+$grey: #dad7cd;
+.navbar-container {
+    padding: 10px;
+    background-color: $grey;
+
+    .navbar-f {
+        background-color: $red;
+        border: double 4px $grey;
+    }
+
+    .navbar-brand {
+        background-color: #cc4343;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 1px #fff;
+
+        .navbar-ico {
+            color: #fff;
+        }
+    }
+    #nav-a {
+        height: 30px;
+        text-decoration: none;
+    }
+}
