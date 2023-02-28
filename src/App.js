@@ -1,13 +1,13 @@
 // Style
 import './sass/App.scss';
 // Components
-import NavBarFixed from './components/NavBarFixed';
+import NavB from './components/NavB';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBarFixed></NavBarFixed>
+      <NavB></NavB>
     </div>
   );
 }
