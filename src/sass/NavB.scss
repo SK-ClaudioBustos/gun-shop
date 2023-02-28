@@ -1,12 +1,12 @@
-$red: #e63946;
-$grey: #dad7cd;
+@use "variables";
+
 .navbar-container {
     padding: 10px;
-    background-color: $grey;
+    background-color: variables.$m2;
 
     .navbar-f {
-        background-color: $red;
-        border: double 4px $grey;
+        background-color: variables.$m1;
+        border: double 4px variables.$m2;
     }
 
     .navbar-brand {
@@ -21,19 +21,19 @@ $grey: #dad7cd;
         }
     }
     #nav-l-ing {
-        color: #b1aed3;
+        color: variables.$ing;
         transition: all 0.2s ease-in-out;
         &:hover {
-            color: #2a89d7;
+            color: variables.$ing-hov;
         }
     }
     
 
     #nav-l-reg {
         transition: all 0.2s ease-in-out;
-        color: #745f5f;
+        color: variables.$reg;
         &:hover {
-            color: #928e55;
+            color: variables.$reg-hov;
         }
     }
 }

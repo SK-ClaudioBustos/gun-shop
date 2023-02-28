@@ -1,5 +1,7 @@
+@use "variables";
 @import "~bootstrap/scss/bootstrap";
 
 html {
-    background-color: #dad7cd;
+    background-color: variables.$m2;
+    scroll-behavior: smooth;
 }
