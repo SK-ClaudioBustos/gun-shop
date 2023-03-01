@@ -1,0 +1,17 @@
+@use "variables";
+@use "mixinsfunc";
+
+.gallery-container {
+    background-color: variables.$m2;
+    .gallery {
+        background-color: variables.$m1;
+        margin-top: 30px;
+        min-height: 400px;
+        max-width: 1000px;
+        padding-top: 45px;
+        
+        @include mixinsfunc.screen-res(1024px){width: 800px;}
+        @include mixinsfunc.screen-res(810px){width: 600px;}
+        @include mixinsfunc.screen-res(610px){width: 200px;}
+    }
+}

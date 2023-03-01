@@ -1,0 +1,6 @@
+
+@mixin screen-res($res) { 
+    @media (max-width: $res) { 
+      @content 
+    } 
+};
