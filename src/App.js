@@ -8,7 +8,10 @@ function App() {
   return (
     <div className="App">
       <NavB></NavB>
-      <Gallery></Gallery>
+      <Gallery section_name={"Seccion 1"}/>
+      <Gallery section_name={"Seccion 2"}/>
+      <Gallery section_name={"Seccion 3"}/>
+      <Gallery section_name={"Seccion 4"}/>
     </div>
   );
 }

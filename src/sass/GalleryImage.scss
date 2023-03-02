@@ -1,10 +1,44 @@
+@use "variables";
+
 .gallery-div {
     width: 200px;
     height: 190px;
+    z-index: 0;
     
     .gallery-img{
-        height: 150px;
+        height: 170px;
         width: 250px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: variables.$gallery-img-border;
+        &:hover {
+            opacity: 0.07;
+            -webkit-transition: opacity 0.3s;
+            -moz-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            -ms-transition: opacity 0.3s;
+            transition: all 0.3s ease-in;
+        }
+    }
+    .gallery-container-text{
+        position: absolute;
+        z-index: -1;
+        height: 170px;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        .gallery-image-title {
+            color: variables.$gallery-span;
+            font-size: 25px;
+        }
+        .gallery-image-container-text {
+            border-top: solid 1px #fff;
+            
+            .gallery-image-text{
+                color: #4682b4;
+                font-size: 15px;
+            }
+        }
+        
     }
 }
 
