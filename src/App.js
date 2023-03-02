@@ -3,6 +3,7 @@ import './sass/App.scss';
 // Components
 import NavB from './components/NavB';
 import Gallery from './components/Gallery';
+import Foot from './components/Foot';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Gallery section_name={"Seccion 2"}/>
       <Gallery section_name={"Seccion 3"}/>
       <Gallery section_name={"Seccion 4"}/>
+      <Foot/>
     </div>
   );
 }

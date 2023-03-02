@@ -1,0 +1,36 @@
+@use "variables";
+
+footer {
+    background-color: variables.$m1;
+    height: 100px;
+    p {
+        font-size: .9rem;
+        color: #000;
+        font-size: 12px;
+        margin-bottom: 40px;
+        a {
+            text-decoration: none;
+            color: variables.$m2;
+            &:hover{
+                color: rgb(147, 136, 136);
+            }
+            i {
+                &:hover {
+                    color: rgb(147, 136, 136);
+                }
+            }
+        }
+        @media (max-width: 820px) {
+            font-size: .6rem;
+            margin: 0 10px;
+        }
+        @media (max-width: 620px) {
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+    } 
+}
+
+
+
