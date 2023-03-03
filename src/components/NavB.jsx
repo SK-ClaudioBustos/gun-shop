@@ -7,7 +7,7 @@ import "../sass/NavB.scss"
 function NavBarFixed() {
   return (
         <div className='navbar-container'>
-            <Navbar className="navbar-f rounded" variant="dark" expand="md">
+            <Navbar className="navbar-f rounded" expand="md">
                 <Container>
                     <Navbar.Brand className="navbar-brand d-flex align-items-center justify-content-center" href="#">
                             <i className="navbar-ico bi bi-bullseye"></i>  
@@ -19,8 +19,8 @@ function NavBarFixed() {
                         <Nav className="me-auto">
                             <Nav.Link id="nav-l-ing" href="#ing">Iniciar Sesión</Nav.Link>
                             <Nav.Link id="nav-l-reg" href="#reg">Registrarse</Nav.Link>
-                            <Nav.Link href="#seccion1">Seccion1</Nav.Link>
-                            <Nav.Link href="#seccio2">Seccion2</Nav.Link>
+                            <Nav.Link id="nav-l-section" href="#seccion1">Seccion1</Nav.Link>
+                            <Nav.Link id="nav-l-section" href="#seccio2">Seccion2</Nav.Link>
                         </Nav>   
                     </Navbar.Collapse>    
                 </Container>

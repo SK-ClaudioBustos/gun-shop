@@ -4,3 +4,25 @@
       @content 
     } 
 };
+
+@mixin f1{
+    @font-face {
+      font-family: 'Raleway', sans-serif;
+      src: url("../font/raleway.ttf");
+    }
+}
+
+@mixin background {
+    background-image: linear-gradient(#000000b5,#000000b9) ,url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@mixin boton($col,$col_hov){
+        color: $col;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: $col_hov;
+        }
+}

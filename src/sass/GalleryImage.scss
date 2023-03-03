@@ -1,4 +1,6 @@
 @use "variables";
+@use "mixinsfunc";
+@include mixinsfunc.f1;
 
 .gallery-div {
     width: 200px;
@@ -28,6 +30,7 @@
 
         .gallery-image-title {
             color: variables.$gallery-span;
+            font-family: variables.$f1;
             font-size: 25px;
         }
         .gallery-image-container-text {
@@ -35,6 +38,7 @@
             
             .gallery-image-text{
                 color: #4682b4;
+                font-family: variables.$f1;
                 font-size: 15px;
             }
         }
