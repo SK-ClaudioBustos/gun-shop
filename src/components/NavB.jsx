@@ -16,9 +16,13 @@ function NavBarFixed() {
                         <i className="bi bi-caret-down-square"></i>
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link id="nav-l-ing" href="#ing">Iniciar Sesión</Nav.Link>
-                            <Nav.Link id="nav-l-reg" href="#reg">Registrarse</Nav.Link>
+                        <Nav className="me-auto nav-container-links">
+                            <div className='nav-container-ing'>
+                                <Nav.Link id="nav-l-ing" href="#ing">Iniciar Sesión</Nav.Link>
+                            </div>
+                            <div className='nav-container-reg' id="the_chosen_one">
+                                <Nav.Link id="nav-l-reg" href="#reg">Registrarse</Nav.Link>
+                            </div>
                             <Nav.Link id="nav-l-section" href="#seccion1">Seccion1</Nav.Link>
                             <Nav.Link id="nav-l-section" href="#seccio2">Seccion2</Nav.Link>
                         </Nav>   

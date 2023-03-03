@@ -26,3 +26,25 @@
             color: $col_hov;
         }
 }
+
+@mixin container-botones($border-color,$border-color-hov){
+    height: 40px;
+    width: 115px;
+    border: 1px solid $border-color;
+    border-radius: 5%;
+    background-color: #bf4a4a;
+    transition: all 0.3s ease-out;
+    margin-left: 5px;
+    &:hover {
+        border: 1px solid $border-color-hov;
+    }
+    @include screen-res(768px){
+        border: none;
+        border-radius: 0%;
+        background-color: inherit;
+        margin-left: 0;
+        &:hover {
+            border: none;
+        }
+    }
+}

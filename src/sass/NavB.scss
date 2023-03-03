@@ -23,17 +23,33 @@
             color: #fff;
         }
     }
+    .nav-container-links{
+        @include mixinsfunc.screen-res(768px){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        };
+        .nav-container-ing {
+            @include mixinsfunc.container-botones(variables.$ing,variables.$ing-hov);
+            #nav-l-ing {
+                text-align: center;
+                @include mixinsfunc.boton(variables.$ing,variables.$ing-hov);
+            }
+        }
 
-    #nav-l-ing {
-        @include mixinsfunc.boton(variables.$ing,variables.$ing-hov);
-    }
-    
-    #nav-l-reg {
-        @include mixinsfunc.boton(variables.$reg,variables.$reg-hov);
-    }
+        .nav-container-reg{
+            @include mixinsfunc.container-botones(variables.$reg,variables.$reg-hov);
+            #nav-l-reg {
+                text-align: center;
+                @include mixinsfunc.boton(variables.$reg,variables.$reg-hov);
+            }
+        }
 
-    #nav-l-section {
-        @include mixinsfunc.boton(variables.$sec,variables.$sec-hov);
+        #nav-l-section {
+            @include mixinsfunc.boton(variables.$sec,variables.$sec-hov);
+        }
     }
-
 }
