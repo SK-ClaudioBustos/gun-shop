@@ -1,20 +1,20 @@
 import React from "react";
 import "../sass/GalleryImage.scss";
 import Image from 'react-bootstrap/Image'
-import source from "../img/arma.jpg";
-function GalleryImage(){
+
+function GalleryImage({source,carpeta,alt,nombre,calibre,alcance,peso,precio}){
     return(
         <div className="gallery-div col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
-            <Image className="gallery-img rounded" src={source} alt=".."/>
+            <Image className="gallery-img rounded" src={require(`../img/${carpeta}/${source}.jpg`)} alt={alt}/>
             <div className="gallery-container-text row rounded">
                 <span className="gallery-image-title">
-                    Nombre Arma
+                    {nombre}
                 </span>
                 <div className="gallery-image-container-text">
-                    <span className="gallery-image-text">Calibre: ....</span><br></br>
-                    <span className="gallery-image-text">RPM: ....</span><br></br>
-                    <span className="gallery-image-text">Peso: ...</span><br></br>
-                    <span className="gallery-image-text text-warning">Precio: ....</span>
+                    <span className="gallery-image-text">Calibre: {calibre}</span><br></br>
+                    <span className="gallery-image-text">Alcance Efectivo: {alcance}</span><br></br>
+                    <span className="gallery-image-text">Peso: {peso}</span><br></br>
+                    <span className="gallery-image-text text-warning">Precio: {precio}</span>
                 </div> 
                 
             </div>                
