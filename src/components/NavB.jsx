@@ -8,12 +8,12 @@ import Modal from 'react-bootstrap/Modal';
 import "../sass/NavB.scss"
 
 
-function NavBarFixed() {
+function NavB() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-        <div className='navbar-container'>
+        <div id="navbar-id" className='navbar-container'>
             <Navbar className="navbar-f rounded" expand="md">
                 <Container>
                     <Navbar.Brand className="navbar-brand d-flex align-items-center justify-content-center" href="#">
@@ -101,4 +101,4 @@ function NavBarFixed() {
   );
 }
 
-export default NavBarFixed;
+export default NavB;

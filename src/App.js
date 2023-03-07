@@ -4,11 +4,13 @@ import './sass/App.scss';
 import NavB from './components/NavB';
 import Gallery from './components/Gallery';
 import Foot from './components/Foot';
+import UpButton from './components/UpButton';
 
 function App() {
   return (
     <div className="App">
       <NavB></NavB>
+      <UpButton></UpButton>
       <Gallery id="seccion1" section_name="Rifles" categoria="rifles"/>
       <Gallery id="seccion2" section_name="Escopetas" categoria="escopetas"/>
       <Gallery id="seccion3" section_name="Pistolas" categoria="pistolas"/>
