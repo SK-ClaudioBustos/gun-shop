@@ -39,7 +39,7 @@
                 @include mixinsfunc.boton(variables.$ing,variables.$ing-hov);
             }
         }
-
+          
         .nav-container-reg{
             @include mixinsfunc.container-botones(variables.$reg,variables.$reg-hov);
             #nav-l-reg {
@@ -53,3 +53,8 @@
         }
     }
 }
+
+#navbar-modal {
+    background-color: variables.$m1;
+    font-family: variables.$f1;
+} 
