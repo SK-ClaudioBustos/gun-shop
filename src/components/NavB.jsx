@@ -89,9 +89,9 @@ function NavBarFixed() {
                                 {/* Final Modal Iniciar Sesión */}
                             </div>
                             <Nav.Link id="nav-l-section" href="#seccion1">Rifles</Nav.Link>
-                            <Nav.Link id="nav-l-section" href="#seccio2">Escopetas</Nav.Link>
-                            <Nav.Link id="nav-l-section" href="#seccio2">Pistolas</Nav.Link>
-                            <Nav.Link id="nav-l-section" href="#seccio2">Subfusiles</Nav.Link>
+                            <Nav.Link id="nav-l-section" href="#seccion2">Escopetas</Nav.Link>
+                            <Nav.Link id="nav-l-section" href="#seccion3">Pistolas</Nav.Link>
+                            <Nav.Link id="nav-l-section" href="#seccion4">Subfusiles</Nav.Link>
                         </Nav>   
                     </Navbar.Collapse>    
                 </Container>

@@ -6,7 +6,7 @@ import escopetas from "../data/escopetas";
 import subfusiles from "../data/subfusiles";
 import rifles from "../data/rifles";
 
-function Gallery({section_name,categoria}){
+function Gallery({id,section_name,categoria}){
     let categorias_armas;
     let nombre_carpeta;
     if (categoria === "pistolas"){
@@ -26,7 +26,7 @@ function Gallery({section_name,categoria}){
         nombre_carpeta = "rifles";
     }
     return (
-        <div className="container-fluid gallery-container d-flex justify-content-center">
+        <div id={id} className="container-fluid gallery-container d-flex justify-content-center">
             <div className="gallery rounded row">
                 <div className="col-12">
                     <h1>{section_name}</h1>
