@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image'
 function GalleryImage({source,carpeta,alt,nombre,calibre,alcance,peso,precio}){
     return(
         <div className="gallery-div col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
-            <Image className="gallery-img rounded" src={require(`../img/${carpeta}/${source}.jpg`)} alt={alt}/>
+            <Image className="gallery-img rounded" src={require(`../img/${carpeta}/${source}.svg`)} alt={alt}/>
             <div className="gallery-container-text row rounded">
                 <span className="gallery-image-title">
                     {nombre}
