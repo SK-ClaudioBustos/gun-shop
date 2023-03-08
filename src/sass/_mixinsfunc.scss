@@ -13,7 +13,7 @@
 }
 
 @mixin background {
-    background-image: linear-gradient(#000000b5,#000000b9) ,url("../img/background.jpg");
+    background-image: linear-gradient(#000000b5,#000000b9) ,url("../img/background.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

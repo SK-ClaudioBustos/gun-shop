@@ -17,7 +17,7 @@ function UpButton(){
     return (
         <div id="up-div" className="up-div">
             <i class="up-icon bi bi-arrow-up"></i>  
-            <a className="up-a" href="#navbar-id"></a>
+            <a className="up-a" href="#navbar-id"> </a>
         </div>
     );
 }
