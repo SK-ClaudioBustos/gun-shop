@@ -1,6 +1,7 @@
 import React from "react";
 import "../sass/GalleryImage.scss";
 import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button';
 
 function GalleryImage({source,carpeta,alt,nombre,calibre,alcance,peso,precio}){
     return(
@@ -16,7 +17,9 @@ function GalleryImage({source,carpeta,alt,nombre,calibre,alcance,peso,precio}){
                     <span className="gallery-image-text">Peso: {peso}</span><br></br>
                     <span className="gallery-image-text text-warning">Precio: {precio}</span>
                 </div> 
-                
+                <div className="gallery-button-container d-flex justify-content-center align-items-center">
+                    <Button className="gallery-button" variant="success">Comprar</Button>
+                </div>
             </div>                
         </div>
     );
