@@ -1,0 +1,26 @@
+@use "variables";
+@use "mixinsfunc";
+
+.wel-cont {
+    height: 500px;
+    @include mixinsfunc.background;
+    .wel-div {
+        
+        .wel-title{
+            font-family: variables.$f1;
+            font-size: 50px;
+            -webkit-text-stroke: 1px variables.$m0;
+            color: variables.$m1;
+            @include mixinsfunc.screen-res(1024px){font-size: 40px;}
+        }
+        .wel-text{
+            padding: 0 30px;
+            font-family: variables.$f1;
+            font-size: 32px;
+            -webkit-text-stroke: 1px black;
+            color: variables.$m1;
+            @include mixinsfunc.screen-res(1024px){font-size: 27px;}
+        }
+        
+    }    
+}

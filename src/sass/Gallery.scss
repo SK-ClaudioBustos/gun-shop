@@ -1,6 +1,5 @@
 @use "variables";
 @use "mixinsfunc";
-@include mixinsfunc.f1;
 
 .gallery-container {
     @include mixinsfunc.background;
