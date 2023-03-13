@@ -1,0 +1,35 @@
+
+.shop-div {
+    bottom: 40px;
+    right: 100px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .shop-icon {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        color: #fff;
+    }
+    .shop-button {
+        opacity: 0;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: inherit;
+        z-index: 3;
+    }
+}
