@@ -9,9 +9,10 @@ import "../sass/NavB.scss"
 
 
 function NavB() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
+  const [modalShowIng,buttonShowIng] = useState(false);
+  const [modalShowReg,buttonShowReg] = useState(false);
+
   return (
         <div id="navbar-id" className='navbar-container'>
             <Navbar className="navbar-f rounded" expand="md">
@@ -25,9 +26,10 @@ function NavB() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto nav-container-links">
                             <div className='nav-container-ing'>
-                                <Nav.Link id="nav-l-ing" onClick={handleShow} href="#ing">Iniciar Sesión</Nav.Link>
+                                {/* Boton */}
+                                <Nav.Link id="nav-l-ing" onClick={() => buttonShowIng(true)} href="#ing">Iniciar Sesión</Nav.Link>
                                 {/* Inicio Modal Iniciar Sesión */}
-                                <Modal show={show} onHide={handleClose} backdrop="static" keyboard="false" fullscreen="md-down">
+                                <Modal show={modalShowIng} onHide={() => buttonShowIng(false)} backdrop="static" keyboard="false" fullscreen="md-down">
                                     <Modal.Header id="navbar-modal">
                                         <Modal.Title>Iniciar Sesión</Modal.Title>
                                     </Modal.Header>
@@ -44,10 +46,10 @@ function NavB() {
                                         </Form>
                                     </Modal.Body>
                                     <Modal.Footer id="navbar-modal">
-                                        <Button variant="secondary" onClick={handleClose}>
+                                        <Button variant="secondary" onClick={() => buttonShowIng(false)}>
                                                 Cancelar
                                         </Button>
-                                        <Button variant="dark" onClick={handleClose}>
+                                        <Button variant="dark" onClick={() => buttonShowIng(false)}>
                                                 Ingresar
                                         </Button>
                                     </Modal.Footer>
@@ -55,9 +57,10 @@ function NavB() {
                                 {/* Final Modal Iniciar Sesión */}
                             </div>
                             <div className='nav-container-reg' id="the_chosen_one">
-                                <Nav.Link id="nav-l-reg" onClick={handleShow} href="#reg">Registrarse</Nav.Link>
+                                {/* Boton */}
+                                <Nav.Link id="nav-l-reg" onClick={() => buttonShowReg(true)} href="#reg">Registrarse</Nav.Link>
                                 {/* Inicio Modal Registrarse */}
-                                <Modal show={show} onHide={handleClose} backdrop="static" keyboard="false" fullscreen="md-down">
+                                <Modal show={modalShowReg} onHide={() => buttonShowReg(false)} backdrop="static" keyboard="false" fullscreen="md-down">
                                     <Modal.Header id="navbar-modal">
                                         <Modal.Title>Registrarse</Modal.Title>
                                     </Modal.Header>
@@ -78,10 +81,10 @@ function NavB() {
                                         </Form>
                                     </Modal.Body>
                                     <Modal.Footer id="navbar-modal">
-                                        <Button variant="secondary" onClick={handleClose}>
+                                        <Button variant="secondary" onClick={() => buttonShowReg(false)}>
                                                 Cancelar
                                         </Button>
-                                        <Button variant="dark" onClick={handleClose}>
+                                        <Button variant="dark" onClick={() => buttonShowReg(false)}>
                                                 Registrarse
                                         </Button>
                                     </Modal.Footer>
