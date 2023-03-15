@@ -48,6 +48,7 @@
 
         #nav-l-section {
             @include mixinsfunc.boton(variables.$sec,variables.$sec-hov);
+            margin-left: 5px;
         }
     }
 }
