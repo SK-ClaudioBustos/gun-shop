@@ -1,8 +1,6 @@
 @use "variables";
 @use "mixinsfunc";
 
-@include mixinsfunc.f1;
-
 .navbar-container {
     padding: 10px;
     @include mixinsfunc.background;
@@ -50,6 +48,7 @@
 
         #nav-l-section {
             @include mixinsfunc.boton(variables.$sec,variables.$sec-hov);
+            margin-left: 5px;
         }
     }
 }

@@ -1,12 +1,11 @@
 @use "variables";
 @use "mixinsfunc";
-@include mixinsfunc.f1;
 
 .gallery-container {
     @include mixinsfunc.background;
     .gallery {
         background-color: variables.$m1;
-        margin: 30px 0;
+        margin: 80px 0;
         min-height: 400px;
         max-width: 1000px;
         padding-top: 45px;
