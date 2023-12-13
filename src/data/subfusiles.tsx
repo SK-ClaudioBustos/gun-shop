@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         source: "cz-scorpion-evo",
         alt: "imagen de un subfusil cz scorpion",
@@ -6,7 +6,7 @@ let data = [
         calibre: "9",
         alcance: "150 m",
         peso: "2,55 kg",
-        precio: "300.000",
+        precio: "300.000"
     },
     {
         source: "fn-p90",
@@ -15,7 +15,7 @@ let data = [
         calibre: "5.7",
         alcance: "100 m",
         peso: "3,2 kg",
-        precio: "250.000",
+        precio: "250.000"
     },
     {
         source: "hk-kriss-vector",
@@ -24,7 +24,7 @@ let data = [
         calibre: ".40 S&W",
         alcance: "150 m",
         peso: "2,7 kg",
-        precio: "330.000",
+        precio: "330.000"
     },
     {
         source: "hk-mp5",
@@ -33,7 +33,7 @@ let data = [
         calibre: "9",
         alcance: "150 m",
         peso: "2,3 kg",
-        precio: "200.000",
+        precio: "200.000"
     },
     {
         source: "hk-mp7",
@@ -42,7 +42,7 @@ let data = [
         calibre: "9",
         alcance: "160 m",
         peso: "3,2 kg",
-        precio: "410.000",
+        precio: "410.000"
     },
     {
         source: "hk-ump",
@@ -51,7 +51,7 @@ let data = [
         calibre: ".45",
         alcance: "100 m",
         peso: "3,5 kg",
-        precio: "260.000",
+        precio: "260.000"
     },
     {
         source: "imi-uzi",
@@ -60,7 +60,7 @@ let data = [
         calibre: "9",
         alcance: "200 m",
         peso: "3,5 kg",
-        precio: "210.000",
+        precio: "210.000"
     },
     {
         source: "ingram-mac10",
@@ -69,7 +69,7 @@ let data = [
         calibre: ".45 ACP",
         alcance: "50 m",
         peso: "2,84 kg",
-        precio: "180.000",
+        precio: "180.000"
     },
     {
         source: "steyr-tmp",
@@ -78,7 +78,7 @@ let data = [
         calibre: "9",
         alcance: "200 metro",
         peso: "3,5 kg",
-        precio: "340.000",
+        precio: "340.000"
     }
 ]
 

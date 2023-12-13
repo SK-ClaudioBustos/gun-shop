@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         source: "aa-12",
         alt: "imagen de una escopeta semiautomatica doble A 12",
@@ -6,7 +6,7 @@ let data = [
         calibre: "12",
         alcance: "100 m",
         peso: "5,2 kg",
-        precio: "150.000",
+        precio: "150.000"
     },
     {
         source: "benelli-m3",
@@ -15,7 +15,7 @@ let data = [
         calibre: "12",
         alcance: "50 m",
         peso: "4,5 kg",
-        precio: "50.000",
+        precio: "50.000"
     },
     {
         source: "benelli-m4",
@@ -24,7 +24,7 @@ let data = [
         calibre: "12",
         alcance: "60 m",
         peso: "4,8 kg",
-        precio: "100.000",
+        precio: "100.000"
     },
     {
         source: "mossberg590",
@@ -33,7 +33,7 @@ let data = [
         calibre: "12",
         alcance: "50 m",
         peso: "4,3 kg",
-        precio: "70.000",
+        precio: "70.000"
     },
     {
         source: "saiga12",
@@ -42,7 +42,7 @@ let data = [
         calibre: "12",
         alcance: "110 m",
         peso: "5,1 kg",
-        precio: "160.000",
+        precio: "160.000"
     },
     {
         source: "toz-34",
@@ -51,7 +51,7 @@ let data = [
         calibre: "12",
         alcance: "100 m",
         peso: "5 kg",
-        precio: "120.000",
+        precio: "120.000"
     }
 ]
 

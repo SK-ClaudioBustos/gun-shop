@@ -3,14 +3,13 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from 'react-bootstrap/Button';
 import "../sass/ShopButton.scss";
 
-function ShopButton(){
+function ShopButton() {
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => { setShow(false) };
+    const handleShow = () => { setShow(true) };
 
     return (
-        
-        <div className="shop-div bg-success"> 
+        <div className="shop-div bg-success">
             <i className="shop-icon bi bi-bag-fill"></i>
             <button className="shop-button" onClick={handleShow} ></button>
             <Offcanvas show={show} onHide={handleClose} backdrop={false} scroll={true} placement={"end"}>
@@ -19,7 +18,6 @@ function ShopButton(){
                 </Offcanvas.Header>
                 <hr className="shop-canvas-hr"></hr>
                 <Offcanvas.Body className="bg-success">
-                
                     <div className="shop-canvas-content">
                         <ul>
                             <li>Arma 1</li>
@@ -27,7 +25,6 @@ function ShopButton(){
                             <li>Arma 3</li>
                         </ul>
                     </div>
-
                     <div className="d-flex align-items-center justify-content-center">
                         <Button id="shop-canvas-button" variant="secondary" onClick={handleClose}>
                             Cerrar
@@ -36,8 +33,7 @@ function ShopButton(){
                             Realizar Compra
                         </Button>
                     </div>
-
-                </Offcanvas.Body> 
+                </Offcanvas.Body>
             </Offcanvas>
         </div>
     );

@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         source: "beretta92",
         alt: "imagen de una pistola beretta 92",
@@ -6,7 +6,7 @@ let data = [
         calibre: "9",
         alcance: "30 m",
         peso: "950 kg",
-        precio: "40.000",
+        precio: "40.000"
     },
     {
         source: "colt-1911",
@@ -15,7 +15,7 @@ let data = [
         calibre: ".45",
         alcance: "40-80 m",
         peso: "1,105 kg",
-        precio: "90.000",
+        precio: "90.000"
     },
     {
         source: "cz75",
@@ -24,7 +24,7 @@ let data = [
         calibre: "9",
         alcance: "40 m",
         peso: "970 kg",
-        precio: "45.000",
+        precio: "45.000"
     },
     {
         source: "desert-eagle",
@@ -33,7 +33,7 @@ let data = [
         calibre: ".50",
         alcance: "70 m",
         peso: "2,900 kg",
-        precio: "150.000",
+        precio: "150.000"
     },
     {
         source: "fn-five-seven",
@@ -42,7 +42,7 @@ let data = [
         calibre: "5.7",
         alcance: "90 m",
         peso: "1,850 kg",
-        precio: "100.000",
+        precio: "100.000"
     },
     {
         source: "glock19",
@@ -51,7 +51,7 @@ let data = [
         calibre: "9",
         alcance: "40 m",
         peso: "999 kg",
-        precio: "80.000",
+        precio: "80.000"
     },
     {
         source: "hk-usp",
@@ -60,7 +60,7 @@ let data = [
         calibre: ".45",
         alcance: "60 m",
         peso: "1,004 kg",
-        precio: "75.000",
+        precio: "75.000"
     },
     {
         source: "luger-p08",
@@ -69,7 +69,7 @@ let data = [
         calibre: "9 parabellum",
         alcance: "35 m",
         peso: "850 kg",
-        precio: "120.000",
+        precio: "120.000"
     },
     {
         source: "mauser-m712",
@@ -78,7 +78,7 @@ let data = [
         calibre: "7,63",
         alcance: "150-200 m",
         peso: "1,22 kg",
-        precio: "190.000",
+        precio: "190.000"
     },
     {
         source: "ruger-mk4",
@@ -87,7 +87,7 @@ let data = [
         calibre: ".22",
         alcance: "100 m",
         peso: "800 kg",
-        precio: "40.000",
+        precio: "40.000"
     },
     {
         source: "sig-sauer-p226",
@@ -96,7 +96,7 @@ let data = [
         calibre: ".357 SIG",
         alcance: "40-80 m",
         peso: "964 kg",
-        precio: "90.000",
+        precio: "90.000"
     },
     {
         source: "tt-33",
@@ -105,7 +105,7 @@ let data = [
         calibre: "7,62",
         alcance: "50 m",
         peso: "830 kg",
-        precio: "160.000",
+        precio: "160.000"
     },
     {
         source: "walther-ppk",
@@ -114,7 +114,7 @@ let data = [
         calibre: "9",
         alcance: "50 m",
         peso: "700 kg",
-        precio: "170.000",
+        precio: "170.000"
     }
 
 ]
