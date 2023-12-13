@@ -2,7 +2,8 @@
 @use "mixinsfunc";
 
 .gallery-container {
-    @include mixinsfunc.background;
+    background-color: variables.$sec;
+    
     .gallery {
         background-color: variables.$m1;
         margin: 80px 0;

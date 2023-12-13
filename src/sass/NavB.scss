@@ -3,8 +3,8 @@
 
 .navbar-container {
     padding: 10px;
-    @include mixinsfunc.background;
     font-family: variables.$f1;
+    background-color: variables.$sec;
 
     .navbar-f {
         background-color: variables.$m1;
@@ -52,8 +52,3 @@
         }
     }
 }
-
-#navbar-modal {
-    background-color: variables.$m1;
-    font-family: variables.$f1;
-} 
