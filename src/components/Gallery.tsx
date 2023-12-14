@@ -11,26 +11,22 @@ interface IGalleryProps {
     categoria: string
 }
 
-function Gallery(props: IGalleryProps){
+function Gallery(props: IGalleryProps) {
     const { id, sectionName, categoria } = props
-    let categoriasArmas;
-    let nombreCarpeta;
-    if (categoria === "pistolas"){
-        categoriasArmas = pistolas;
-        nombreCarpeta = "pistolas";
+    const getData = (categoria: string) => {
+        switch (categoria) {
+            case "pistolas":
+                return pistolas;
+            case "rifles":
+                return rifles;
+            case "escopetas":
+                return escopetas;
+            default:
+                return subfusiles;
+        }
     }
-    if (categoria === "escopetas"){
-        categoriasArmas = escopetas;
-        nombreCarpeta = "escopetas"
-    }
-    if (categoria === "subfusiles"){
-        categoriasArmas = subfusiles;
-        nombreCarpeta = "subfusiles";
-    }
-    if (categoria === "rifles"){
-        categoriasArmas = rifles;
-        nombreCarpeta = "rifles";
-    }
+    const categoriasArmas = getData(categoria);
+    const nombreCarpeta = categoria;
     return (
         <div id={id} className="container-fluid gallery-container d-flex justify-content-center">
             <div className="gallery rounded row">

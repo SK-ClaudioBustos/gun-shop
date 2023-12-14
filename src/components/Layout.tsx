@@ -7,12 +7,14 @@ import ShopButton from './ShopButton';
 import { useState } from 'react';
 import DialogModal from './DialogModal';
 import { DialogData } from '../types';
+import dataSections from '../data/sections';
 
 const Layout = () => {
   const [dialogState, setDialogState] = useState<DialogData>({ show: false, titulo: "" });
   const changeState = (props: DialogData) => {
     setDialogState({ ...props });
   }
+  const data = dataSections;
   return (
     <>
       <NavB changeDialogState={changeState}/>
@@ -20,10 +22,12 @@ const Layout = () => {
       <Welcome title="Bienvenidos a mi pagina de ventas" text="Esta pagina fue creada con fines de demostración, el contenido mostrado en la misma no me pertenece" />
       <UpButton />
       <ShopButton />
-      <Gallery id="seccion1" sectionName="Rifles" categoria="rifles" />
-      <Gallery id="seccion2" sectionName="Escopetas" categoria="escopetas" />
-      <Gallery id="seccion3" sectionName="Pistolas" categoria="pistolas" />
-      <Gallery id="seccion4" sectionName="Subfusiles" categoria="subfusiles" />
+      {
+        data.map((section) => (
+          <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} />
+
+        ))
+      }
       <Foot />
     </>
   )
