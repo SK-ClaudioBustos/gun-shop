@@ -6,9 +6,9 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import { ReactElement, Ref, forwardRef } from 'react';
-import "../sass/DialogModal.scss";
 import { DialogData } from '../types';
 import Modal from './Modal';
+import "../sass/DialogModal.scss";
 
 interface IDialogModalProps {
   dialogState: {
@@ -30,7 +30,8 @@ const Transition = forwardRef(function Transition(
 const DialogModal = (props: IDialogModalProps) => {
   const { dialogState, changeDialogState } = props;
   const { show, titulo } = dialogState;
-  const closeDialog: DialogData = { show: false, titulo: "" };
+  const closeDialog: DialogData = { show: false, titulo };
+  const tituloDialog = titulo === "login" ? "Iniciar Sesión" : "Registro";
   return (
       <Dialog
         open={show}
@@ -39,13 +40,13 @@ const DialogModal = (props: IDialogModalProps) => {
         onClose={ () => { changeDialogState(closeDialog) }}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle className="dialog">{ titulo === "login" ? "Iniciar Sesión" : "Registro" }</DialogTitle>
+        <DialogTitle className="dialog">{tituloDialog}</DialogTitle>
         <DialogContent className="dialog">
           <Modal titulo={titulo}/>
         </DialogContent>
         <DialogActions className="dialog">
-          <Button onClick={() => { changeDialogState(closeDialog) }}>Cancelar</Button>
-          <Button onClick={() => { changeDialogState(closeDialog) }}>Aceptar</Button>
+          <Button color="success" onClick={() => { changeDialogState(closeDialog) }}>Aceptar</Button>
+          <Button color="primary" onClick={() => { changeDialogState(closeDialog) }}>Cancelar</Button>
         </DialogActions>
       </Dialog>
   )
