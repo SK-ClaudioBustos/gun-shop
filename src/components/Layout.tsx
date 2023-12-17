@@ -16,7 +16,7 @@ const Layout = () => {
   }
   const data = dataSections;
   return (
-    <>
+    <div id='layout'>
       <NavB changeDialogState={changeState}/>
       <DialogModal dialogState={dialogState} changeDialogState={changeState}/>
       <Welcome title="Bienvenidos a mi pagina de ventas" text="Esta pagina fue creada con fines de demostración, el contenido mostrado en la misma no me pertenece" />
@@ -25,11 +25,10 @@ const Layout = () => {
       {
         data.map((section) => (
           <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} />
-
         ))
       }
       <Foot />
-    </>
+    </div>
   )
 }
 
