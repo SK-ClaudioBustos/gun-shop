@@ -8,7 +8,7 @@ import { TransitionProps } from '@mui/material/transitions';
 import { ReactElement, Ref, forwardRef } from 'react';
 import { DialogData } from '../types';
 import Modal from './Modal';
-import "../sass/DialogModal.scss";
+import { Box } from '@mui/material';
 
 interface IDialogModalProps {
   dialogState: {
@@ -16,6 +16,13 @@ interface IDialogModalProps {
     titulo: string
   }
   changeDialogState: (props: DialogData) => void
+}
+
+const style = {
+  title: { fontFamily: "Kanit, sans-serif", borderBottom: "1px solid #000" },
+  content: { marginTop: "15px" },
+  button1: { fontFamily: "Kanit, sans-serif", fontWeight: "bold", color: "#312b75" },
+  button2: { fontFamily: "Kanit, sans-serif", fontWeight: "bold", color: "#1f5320" }
 }
 
 const Transition = forwardRef(function Transition(
@@ -33,22 +40,26 @@ const DialogModal = (props: IDialogModalProps) => {
   const closeDialog: DialogData = { show: false, titulo };
   const tituloDialog = titulo === "login" ? "Iniciar Sesión" : "Registro";
   return (
-      <Dialog
-        open={show}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={ () => { changeDialogState(closeDialog) }}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <DialogTitle className="dialog">{tituloDialog}</DialogTitle>
-        <DialogContent className="dialog">
-          <Modal titulo={titulo}/>
+    <Dialog
+      open={show}
+      TransitionComponent={Transition}
+      keepMounted
+      onClose={() => { changeDialogState(closeDialog) }}
+      aria-describedby="alert-dialog-slide-description"
+    >
+      <Box sx={{ backgroundColor: "#df091b" }}>
+        <DialogTitle sx={style.title}>
+          {tituloDialog}
+        </DialogTitle>
+        <DialogContent sx={style.content}>
+          <Modal titulo={titulo} />
         </DialogContent>
-        <DialogActions className="dialog">
-          <Button color="success" onClick={() => { changeDialogState(closeDialog) }}>Aceptar</Button>
-          <Button color="primary" onClick={() => { changeDialogState(closeDialog) }}>Cancelar</Button>
+        <DialogActions >
+          <Button sx={style.button1} color="success" onClick={() => { changeDialogState(closeDialog) }}>Aceptar</Button>
+          <Button sx={style.button2} color="primary" onClick={() => { changeDialogState(closeDialog) }}>Cancelar</Button>
         </DialogActions>
-      </Dialog>
+      </Box>
+    </Dialog>
   )
 }
 

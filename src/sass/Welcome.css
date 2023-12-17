@@ -5,7 +5,6 @@
 .wel-cont .wel-div .wel-title {
   font-family: "Kanit", sans-serif;
   font-size: 50px;
-  -webkit-text-stroke: 1px #b61926;
   color: #df091b;
 }
 @media (max-width: 1024px) {
@@ -17,8 +16,7 @@
   padding: 0 30px;
   font-family: "Kanit", sans-serif;
   font-size: 32px;
-  -webkit-text-stroke: 1px black;
-  color: #df091b;
+  color: #b61926;
 }
 @media (max-width: 1024px) {
   .wel-cont .wel-div .wel-text {
