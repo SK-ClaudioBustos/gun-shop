@@ -19,6 +19,7 @@ interface IDialogModalProps {
 }
 
 const style = {
+  container: { backgroundColor: "#353535" },
   title: { fontFamily: "Kanit, sans-serif", borderBottom: "1px solid #000" },
   content: { marginTop: "15px" },
   button1: { fontFamily: "Kanit, sans-serif", fontWeight: "bold", color: "#312b75" },
@@ -41,13 +42,14 @@ const DialogModal = (props: IDialogModalProps) => {
   const tituloDialog = titulo === "login" ? "Iniciar Sesión" : "Registro";
   return (
     <Dialog
+      disableScrollLock
       open={show}
       TransitionComponent={Transition}
       keepMounted
       onClose={() => { changeDialogState(closeDialog) }}
       aria-describedby="alert-dialog-slide-description"
     >
-      <Box sx={{ backgroundColor: "#df091b" }}>
+      <Box sx={style.container}>
         <DialogTitle sx={style.title}>
           {tituloDialog}
         </DialogTitle>

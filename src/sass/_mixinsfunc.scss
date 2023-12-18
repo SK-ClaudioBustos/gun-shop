@@ -31,7 +31,7 @@
 @mixin container-botones($border-color,$border-color-hov){
     height: 40px;
     width: 115px;
-    background-color: variables.$m3;
+    background-color: variables.$m2;
     transition: all 0.3s ease-out;
     margin-left: 5px;
     &:hover {
