@@ -14,7 +14,7 @@ function ShopButton() {
             <button className="shop-button" onClick={handleShow} ></button>
             <Offcanvas show={show} onHide={handleClose} backdrop={false} scroll={true} placement={"end"}>
                 <Offcanvas.Header id="shop-canvas-header" className="bg-success" closeButton>
-                    <Offcanvas.Title>Lista de Compras</Offcanvas.Title>
+                    <Offcanvas.Title>Carrito de Compras</Offcanvas.Title>
                 </Offcanvas.Header>
                 <hr className="shop-canvas-hr"></hr>
                 <Offcanvas.Body className="bg-success">

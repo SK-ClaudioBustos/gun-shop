@@ -10765,6 +10765,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html {
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7098039216), rgba(0, 0, 0, 0.7254901961)), url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   scroll-behavior: smooth;
 }/*# sourceMappingURL=App.css.map */

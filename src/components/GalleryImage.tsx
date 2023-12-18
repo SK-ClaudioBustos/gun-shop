@@ -30,7 +30,7 @@ function GalleryImage(props: IGalleryImageProps){
                     <span className="gallery-image-text text-warning">Precio: ${precio}</span>
                 </div>
                 <div className="gallery-button-container d-flex justify-content-center align-items-center">
-                    <Button className="gallery-button" variant="success">Comprar</Button>
+                    <Button className="gallery-button" variant="success">Añadir <i className="bi bi-cart"></i></Button>
                 </div>
             </div>
         </div>

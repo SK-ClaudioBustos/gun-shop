@@ -3,7 +3,7 @@
   src: url("../font/Kanit-Light.ttf");
 }
 footer {
-  background-color: #df091b;
+  background-color: #353535;
   height: 100px;
 }
 footer p {
@@ -16,7 +16,7 @@ footer p {
 }
 footer p a {
   text-decoration: none;
-  color: #1f5320;
+  color: #379439;
 }
 footer p a:hover {
   color: #69cc5b;

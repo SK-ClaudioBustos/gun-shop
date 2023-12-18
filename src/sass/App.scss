@@ -1,6 +1,8 @@
 @use "variables";
+@use "mixinsfunc";
 @import "~bootstrap/scss/bootstrap";
 
-html {
+body {
+    @include mixinsfunc.background;
     scroll-behavior: smooth;
 }

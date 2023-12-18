@@ -1,5 +1,9 @@
 .wel-cont {
   height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7098039216), rgba(0, 0, 0, 0.7254901961)), url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .wel-cont .wel-div .wel-title {
   font-family: "Kanit", sans-serif;

@@ -1,3 +1,4 @@
+@use "variables";
 
 @mixin screen-res($res) { 
     @media (max-width: $res) { 
@@ -30,13 +31,11 @@
 @mixin container-botones($border-color,$border-color-hov){
     height: 40px;
     width: 115px;
-    border: 1px solid $border-color;
-    border-radius: 5%;
-    background-color: #bf4a4a;
+    background-color: variables.$m3;
     transition: all 0.3s ease-out;
     margin-left: 5px;
     &:hover {
-        border: 1px solid $border-color-hov;
+        border-bottom: 1px solid $border-color-hov;
     }
     @include screen-res(768px){
         border: none;

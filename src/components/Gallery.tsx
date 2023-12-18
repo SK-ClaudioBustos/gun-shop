@@ -32,7 +32,7 @@ function Gallery(props: IGalleryProps) {
             <div className="gallery rounded row">
                 <div className="col-12">
                     <h1>{sectionName}</h1>
-                    <hr></hr>
+                    <hr/>
                 </div>
                 {
                     categoriasArmas.map((arma, index) =>

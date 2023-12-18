@@ -3,7 +3,7 @@
 
 .wel-cont {
     height: 500px;
-    // background-color: variables.$sec;
+    @include mixinsfunc.background;
     .wel-div {
         
         .wel-title{

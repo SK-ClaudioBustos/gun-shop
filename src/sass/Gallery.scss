@@ -4,22 +4,23 @@
 .gallery-container {
     
     .gallery {
-        background-color: variables.$m1;
+        background-color: variables.$m3;
         margin: 80px 0;
         min-height: 400px;
         max-width: 1000px;
         padding-top: 45px;
         padding-bottom: 25px;
         h1 {
+            color: variables.$sec-hov;
             padding-left: 25px;
             font-family: variables.$f1;
             @include mixinsfunc.screen-res(768px){text-align: center;}
         }
         hr {
-            color: #000;
+            background-color: "";
             border: none;
             height: 1px;
-            background-color: #000;
+            background-color: variables.$sec-hov;
             opacity: 1;
         }
         @include mixinsfunc.screen-res(1024px){width: 800px;}

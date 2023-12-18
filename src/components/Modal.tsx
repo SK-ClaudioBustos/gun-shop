@@ -46,7 +46,6 @@ const ModalLogin = () => {
             />
             <TextField
                 color="warning"
-                id="outlined-basic"
                 placeholder="Contraseña"
                 variant="standard"
                 InputProps={{
@@ -120,7 +119,6 @@ const ModalRegister = () => {
 
             <TextField
                 color="warning"
-                id="outlined-basic"
                 placeholder="Contraseña"
                 variant="standard"
                 InputProps={{
@@ -134,7 +132,6 @@ const ModalRegister = () => {
 
             <TextField
                 color="warning"
-                id="outlined-basic"
                 placeholder="Repetir contraseña"
                 variant="standard"
                 InputProps={{
