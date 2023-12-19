@@ -8,7 +8,7 @@
 .wel-cont .wel-div .wel-title {
   font-family: "Kanit", sans-serif;
   font-size: 50px;
-  color: #e9e3e3;
+  color: #cfcbcb;
 }
 @media (max-width: 1024px) {
   .wel-cont .wel-div .wel-title {
@@ -19,7 +19,7 @@
   padding: 0 30px;
   font-family: "Kanit", sans-serif;
   font-size: 32px;
-  color: #9a9a9a;
+  color: #5e5d5d;
 }
 @media (max-width: 1024px) {
   .wel-cont .wel-div .wel-text {

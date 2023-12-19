@@ -20,7 +20,7 @@ interface IDialogModalProps {
 
 const style = {
   container: { backgroundColor: "#353535" },
-  title: { fontFamily: "Kanit, sans-serif", borderBottom: "1px solid #000" },
+  title: { fontFamily: "Kanit, sans-serif", borderBottom: "1px solid #fff", color: "#fff" },
   content: { marginTop: "15px" },
   button1: { fontFamily: "Kanit, sans-serif", fontWeight: "bold", color: "#312b75" },
   button2: { fontFamily: "Kanit, sans-serif", fontWeight: "bold", color: "#1f5320" }

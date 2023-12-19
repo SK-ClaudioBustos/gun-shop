@@ -9,6 +9,10 @@ interface IModalProps {
     titulo: string
 }
 
+const styles = {
+    input: { input: { color: '#fff' } }
+}
+
 const Modal = (props: IModalProps) => {
     const { titulo } = props;
     return (
@@ -33,6 +37,7 @@ const ModalLogin = () => {
     return (
         <>
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Nombre de usuario"
                 variant="standard"
@@ -45,7 +50,9 @@ const ModalLogin = () => {
                 }}
             />
             <TextField
+                sx={styles.input}
                 color="warning"
+                type="password"
                 placeholder="Contraseña"
                 variant="standard"
                 InputProps={{
@@ -65,6 +72,7 @@ const ModalRegister = () => {
         <>
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Nombre de usuario"
                 variant="standard"
@@ -78,6 +86,7 @@ const ModalRegister = () => {
             />
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Email"
                 variant="standard"
@@ -92,6 +101,7 @@ const ModalRegister = () => {
             />
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Edad"
                 variant="standard"
@@ -105,6 +115,7 @@ const ModalRegister = () => {
             />
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="DNI"
                 variant="standard"
@@ -118,6 +129,7 @@ const ModalRegister = () => {
             />
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Contraseña"
                 variant="standard"
@@ -131,6 +143,7 @@ const ModalRegister = () => {
             />
 
             <TextField
+                sx={styles.input}
                 color="warning"
                 placeholder="Repetir contraseña"
                 variant="standard"
@@ -147,4 +160,4 @@ const ModalRegister = () => {
     );
 }
 
-export default Modal
+export default Modal;
