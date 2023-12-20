@@ -53,6 +53,7 @@ const ModalLogin = () => {
                 type="password"
                 placeholder="Contraseña"
                 variant="standard"
+                autoComplete="password"
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
@@ -68,7 +69,6 @@ const ModalLogin = () => {
 const ModalRegister = () => {
     return (
         <>
-
             <TextField
                 sx={styles.input}
                 placeholder="Nombre de usuario"
@@ -127,6 +127,7 @@ const ModalRegister = () => {
                 sx={styles.input}
                 type="password"
                 placeholder="Contraseña"
+                autoComplete="password"
                 variant="standard"
                 InputProps={{
                     startAdornment: (
@@ -141,6 +142,7 @@ const ModalRegister = () => {
                 sx={styles.input}
                 type="password"
                 placeholder="Repetir contraseña"
+                autoComplete="repeat-password"
                 variant="standard"
                 InputProps={{
                     startAdornment: (

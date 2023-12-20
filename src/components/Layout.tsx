@@ -19,21 +19,32 @@ const Layout = () => {
   const data = dataSections;
   const [itemList, setItemList] = useState<ItemCarrito[]>([]);
   const handleAddItem = (nombre: string, precio: string, id: string) => {
-    setItemList([{ nombre, precio, id}, ...itemList]);
+    setItemList([{ nombre, precio, id }, ...itemList]);
   }
+  const [showUpButton, setshowUpButton] = useState(false)
+  window.onscroll = function () {
+    const alturaPagina = window.scrollY;
+    if (alturaPagina >= 300) {
+      setshowUpButton(true);
+    } else {
+      setshowUpButton(false);
+    }
+  };
   return (
     <div id='layout'>
-      <NavB changeDialogState={changeState}/>
-      <DialogModal dialogState={dialogState} changeDialogState={changeState}/>
+      <NavB changeDialogState={changeState} />
+      <DialogModal dialogState={dialogState} changeDialogState={changeState} />
       <Welcome title="Bienvenidos a mi pagina de ventas" text="Esta pagina fue creada con fines de demostración, el contenido mostrado en la misma no me pertenece" />
-      <UpButton />
-      <ShopButton setShow={setShowBuyMenu}/>
-      { showBuyMenu &&
-        <BuyMenu itemList={itemList} show={showBuyMenu} setShowBuyMenu={setShowBuyMenu} setItemList={setItemList}/>
+      {
+        showUpButton && <UpButton />
+      }
+      <ShopButton setShow={setShowBuyMenu} />
+      {showBuyMenu &&
+        <BuyMenu itemList={itemList} show={showBuyMenu} setShowBuyMenu={setShowBuyMenu} setItemList={setItemList} />
       }
       {
         data.map((section) => (
-          <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} handleAddItem={handleAddItem}/>
+          <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} handleAddItem={handleAddItem} />
         ))
       }
       <Foot />
