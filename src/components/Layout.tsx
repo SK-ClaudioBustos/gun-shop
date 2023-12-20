@@ -6,7 +6,7 @@ import Welcome from './Welcome';
 import ShopButton from './ShopButton';
 import { useState } from 'react';
 import DialogModal from './DialogModal';
-import { DialogData } from '../types';
+import { DialogData, ItemCarrito } from '../types';
 import dataSections from '../data/sections';
 import BuyMenu from './BuyMenu';
 
@@ -15,8 +15,12 @@ const Layout = () => {
   const changeState = (props: DialogData) => {
     setDialogState({ ...props });
   }
-  const data = dataSections;
   const [showBuyMenu, setShowBuyMenu] = useState(false);
+  const data = dataSections;
+  const [itemList, setItemList] = useState<ItemCarrito[]>([]);
+  const handleAddItem = (nombre: string, precio: string) => {
+    setItemList([{ nombre, precio}, ...itemList]);
+  }
   return (
     <div id='layout'>
       <NavB changeDialogState={changeState}/>
@@ -25,11 +29,11 @@ const Layout = () => {
       <UpButton />
       <ShopButton setShow={setShowBuyMenu}/>
       { showBuyMenu &&
-        <BuyMenu show={showBuyMenu} setShowBuyMenu={setShowBuyMenu}/>
+        <BuyMenu itemList={itemList} show={showBuyMenu} setShowBuyMenu={setShowBuyMenu} setItemList={setItemList}/>
       }
       {
         data.map((section) => (
-          <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} />
+          <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} handleAddItem={handleAddItem}/>
         ))
       }
       <Foot />

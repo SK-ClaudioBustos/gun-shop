@@ -1,67 +1,18 @@
+import { Button } from "@mui/material";
 import { Offcanvas } from "react-bootstrap";
-import { Button, List } from "@mui/material";
-import Item from "./Item";
+import Lista from "./Lista";
 import "../sass/BuyMenu.scss";
+import { ItemCarrito } from "../types";
 
 interface IBuyMenuProps {
     show: boolean
+    itemList: ItemCarrito[]
     setShowBuyMenu: React.Dispatch<React.SetStateAction<boolean>>
+    setItemList: (value: React.SetStateAction<ItemCarrito[]>) => void
 }
 
-const datosPrueba = [
-    {
-        nombre: "AK47",
-        precio: "15.000"
-    },
-    {
-        nombre: "XM7",
-        precio: "500.000"
-    },
-    {
-        nombre: "M4A1",
-        precio: "200.000"
-    },
-    {
-        nombre: "XM7",
-        precio: "500.000"
-    },
-    {
-        nombre: "XM7",
-        precio: "500.000"
-    }
-    // {
-    //     nombre: "XM7",
-    //     precio: "500.000"
-    // },
-    // {
-    //     nombre: "XM7",
-    //     precio: "500.000"
-    // }
-]
-
-const style = {
-    list: {
-        width: '100%',
-        height: "100%",
-        position: 'relative',
-        overflow: 'auto',
-        paddingBottom: "0",
-        '&::-webkit-scrollbar': {
-            width: '5px'
-          },
-          '&::-webkit-scrollbar-track': {
-            boxShadow: 'none',
-            webkitBoxShadow: 'none'
-          },
-          '&::-webkit-scrollbar-thumb': {
-            backgroundColor: '#fff',
-            outline: 'none'
-          }
-      }
-};
-
 const BuyMenu = (props: IBuyMenuProps) => {
-    const { show, setShowBuyMenu } = props;
+    const { show, itemList, setShowBuyMenu, setItemList } = props;
     const handleClose = () => { setShowBuyMenu(false) }
     return (
         <Offcanvas id="canvas" show={show} onHide={handleClose} backdrop={false} scroll={true} placement={"end"}>
@@ -70,13 +21,7 @@ const BuyMenu = (props: IBuyMenuProps) => {
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <div className="shop-canvas-content">
-                    <List sx={style.list} component="nav" subheader={<li />} aria-label="items">
-                    {
-                        datosPrueba.map((item, key) => (
-                            <Item nombre={item.nombre} precio={item.precio} key={key}/>
-                        ))
-                    }
-                    </List>
+                    <Lista itemList={itemList} setItemList={setItemList}/>
                 </div>
                 <div className="d-flex justify-content-around mt-2">
                     <Button onClick={handleClose} variant="text" color="success">

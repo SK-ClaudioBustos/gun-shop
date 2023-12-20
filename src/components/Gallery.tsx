@@ -9,10 +9,11 @@ interface IGalleryProps {
     id: string
     sectionName: string
     categoria: string
+    handleAddItem: (nombre: string, precio: string) => void
 }
 
 function Gallery(props: IGalleryProps) {
-    const { id, sectionName, categoria } = props
+    const { id, sectionName, categoria, handleAddItem } = props
     const getData = (categoria: string) => {
         switch (categoria) {
             case "pistolas":
@@ -46,6 +47,7 @@ function Gallery(props: IGalleryProps) {
                             alcance={arma.alcance}
                             peso={arma.peso}
                             precio={arma.precio}
+                            handleAddItem={handleAddItem}
                         />
                     )
                 }
