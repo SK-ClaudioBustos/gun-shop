@@ -84,10 +84,10 @@
   color: #69cc5b;
 }
 .navbar-container .nav-container-links #nav-l-section {
-  color: #000;
+  color: #fff;
   transition: all 0.2s ease-in-out;
   margin-left: 5px;
 }
 .navbar-container .nav-container-links #nav-l-section:hover {
-  color: #fff;
+  color: #000;
 }/*# sourceMappingURL=NavB.css.map */

@@ -46,7 +46,7 @@
         }
 
         #nav-l-section {
-            @include mixinsfunc.boton(variables.$sec,variables.$sec-hov);
+            @include mixinsfunc.boton(variables.$sec-hov,variables.$sec);
             margin-left: 5px;
         }
     }
