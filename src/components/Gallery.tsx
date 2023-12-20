@@ -9,7 +9,7 @@ interface IGalleryProps {
     id: string
     sectionName: string
     categoria: string
-    handleAddItem: (nombre: string, precio: string) => void
+    handleAddItem: (nombre: string, precio: string, id: string) => void
 }
 
 function Gallery(props: IGalleryProps) {

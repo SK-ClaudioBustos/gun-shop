@@ -6,4 +6,5 @@ export interface DialogData {
 export interface ItemCarrito {
     precio: string
     nombre: string
+    id: string
 }

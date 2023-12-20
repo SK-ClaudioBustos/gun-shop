@@ -18,8 +18,8 @@ const Layout = () => {
   const [showBuyMenu, setShowBuyMenu] = useState(false);
   const data = dataSections;
   const [itemList, setItemList] = useState<ItemCarrito[]>([]);
-  const handleAddItem = (nombre: string, precio: string) => {
-    setItemList([{ nombre, precio}, ...itemList]);
+  const handleAddItem = (nombre: string, precio: string, id: string) => {
+    setItemList([{ nombre, precio, id}, ...itemList]);
   }
   return (
     <div id='layout'>

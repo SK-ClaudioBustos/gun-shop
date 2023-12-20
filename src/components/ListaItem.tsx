@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 interface IItemProps {
     precio: string
     nombre: string
+    id: string
     handleDelete: (nombre: string) => void
 }
 
@@ -12,14 +13,14 @@ const style = {
 }
 
 const ListaItem = (props: IItemProps) => {
-    const { precio, nombre, handleDelete } = props;
+    const { id, precio, nombre, handleDelete } = props;
     return (
         <>
             <ListItem
                 disablePadding
                 sx={style.item}
                 secondaryAction={
-                    <IconButton edge="end" aria-label="delete" onClick={ () => { handleDelete(nombre) }}>
+                    <IconButton edge="end" aria-label="delete" onClick={ () => { handleDelete(id) }}>
                         <DeleteIcon color="error"/>
                     </IconButton>
                 }>

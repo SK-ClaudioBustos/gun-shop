@@ -30,14 +30,14 @@ interface IListaProps {
 
 const Lista = (props: IListaProps) => {
   const { itemList, setItemList } = props;
-  const handleDelete = (nombre: string) => {
-    setItemList(itemList.filter((item) => item.nombre !== nombre))
+  const handleDelete = (id: string) => {
+    setItemList(itemList.filter((item) => item.id !== id))
 }
   return (
     <List sx={style.list} component="nav" subheader={<li />} aria-label="items">
       {
         itemList.map((item, key) => (
-          <ListaItem nombre={item.nombre} precio={item.precio} key={key} handleDelete={handleDelete}/>
+          <ListaItem nombre={item.nombre} precio={item.precio} key={key} id={item.id} handleDelete={handleDelete}/>
         ))
       }
     </List>

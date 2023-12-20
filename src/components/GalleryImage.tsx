@@ -12,7 +12,11 @@ interface IGalleryImageProps {
     alcance: string
     peso: string
     precio: string
-    handleAddItem: (nombre: string, precio: string) => void
+    handleAddItem: (nombre: string, precio: string, id: string) => void
+}
+
+const uid = (): string => {
+    return Date.now().toString(36) + Math.random().toString(36);
 }
 
 function GalleryImage(props: IGalleryImageProps){
@@ -31,7 +35,7 @@ function GalleryImage(props: IGalleryImageProps){
                     <span className="gallery-image-text text-warning">Precio: ${precio}</span>
                 </div>
                 <div className="gallery-button-container d-flex justify-content-center align-items-center">
-                    <Button onClick={ () => { handleAddItem(nombre, precio) }} className="gallery-button" variant="success">Añadir <i className="bi bi-cart"></i></Button>
+                    <Button onClick={ () => { handleAddItem(nombre, precio, uid()) }} className="gallery-button" variant="success">Añadir <i className="bi bi-cart"></i></Button>
                 </div>
             </div>
         </div>
