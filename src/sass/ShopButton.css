@@ -30,34 +30,4 @@
   border: none;
   background-color: inherit;
   z-index: 5;
-}
-
-.shop-canvas-hr {
-  opacity: 1;
-  margin: 0;
-  height: 1px;
-  border: 0;
-  border-color: #000;
-  background-color: #000;
-  color: #000;
-  padding: 0;
-}
-
-.shop-canvas-content {
-  font-family: "Kanit", sans-serif;
-  padding-top: 10px;
-  border-radius: 3%;
-  border: 1px solid #000;
-  height: 370px;
-  width: 350px;
-}
-
-#shop-canvas-header {
-  font-family: "Kanit", sans-serif;
-}
-
-#shop-canvas-button {
-  font-family: "Kanit", sans-serif;
-  margin: 10px;
-  border: 1px solid #000;
 }/*# sourceMappingURL=ShopButton.css.map */

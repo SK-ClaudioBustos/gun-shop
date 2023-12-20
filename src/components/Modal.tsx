@@ -88,6 +88,7 @@ const ModalRegister = () => {
             <TextField
                 sx={styles.input}
                 color="warning"
+                type="email"
                 placeholder="Email"
                 variant="standard"
                 InputProps={{
@@ -131,6 +132,7 @@ const ModalRegister = () => {
             <TextField
                 sx={styles.input}
                 color="warning"
+                type="password"
                 placeholder="Contraseña"
                 variant="standard"
                 InputProps={{
@@ -145,6 +147,7 @@ const ModalRegister = () => {
             <TextField
                 sx={styles.input}
                 color="warning"
+                type="password"
                 placeholder="Repetir contraseña"
                 variant="standard"
                 InputProps={{

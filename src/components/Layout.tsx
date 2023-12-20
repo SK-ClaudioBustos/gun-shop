@@ -8,6 +8,7 @@ import { useState } from 'react';
 import DialogModal from './DialogModal';
 import { DialogData } from '../types';
 import dataSections from '../data/sections';
+import BuyMenu from './BuyMenu';
 
 const Layout = () => {
   const [dialogState, setDialogState] = useState<DialogData>({ show: false, titulo: "" });
@@ -15,13 +16,17 @@ const Layout = () => {
     setDialogState({ ...props });
   }
   const data = dataSections;
+  const [showBuyMenu, setShowBuyMenu] = useState(false);
   return (
     <div id='layout'>
       <NavB changeDialogState={changeState}/>
       <DialogModal dialogState={dialogState} changeDialogState={changeState}/>
       <Welcome title="Bienvenidos a mi pagina de ventas" text="Esta pagina fue creada con fines de demostración, el contenido mostrado en la misma no me pertenece" />
       <UpButton />
-      <ShopButton />
+      <ShopButton setShow={setShowBuyMenu}/>
+      { showBuyMenu &&
+        <BuyMenu show={showBuyMenu} setShowBuyMenu={setShowBuyMenu}/>
+      }
       {
         data.map((section) => (
           <Gallery key={section.id} id={section.id} sectionName={section.sectionName} categoria={section.categoria} />

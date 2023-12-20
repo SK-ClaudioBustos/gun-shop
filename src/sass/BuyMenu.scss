@@ -1,0 +1,19 @@
+@use "variables";
+@use "mixinsfunc";
+
+#canvas {
+    background-color: variables.$m2;
+    color: variables.$m1;
+    font-family: variables.$f1;
+    
+    #shop-canvas-header {
+        border-bottom: 1px solid #fff;
+    }
+    .shop-canvas-content{
+        border-radius: 5px;
+        height: 85%;
+        background-color: variables.$m0;
+        width: 100%;
+    }
+}
+
