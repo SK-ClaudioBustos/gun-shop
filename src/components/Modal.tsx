@@ -38,7 +38,6 @@ const ModalLogin = () => {
         <>
             <TextField
                 sx={styles.input}
-                color="warning"
                 placeholder="Nombre de usuario"
                 variant="standard"
                 InputProps={{
@@ -51,7 +50,6 @@ const ModalLogin = () => {
             />
             <TextField
                 sx={styles.input}
-                color="warning"
                 type="password"
                 placeholder="Contraseña"
                 variant="standard"
@@ -73,7 +71,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 placeholder="Nombre de usuario"
                 variant="standard"
                 InputProps={{
@@ -87,7 +84,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 type="email"
                 placeholder="Email"
                 variant="standard"
@@ -103,7 +99,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 placeholder="Edad"
                 variant="standard"
                 InputProps={{
@@ -117,7 +112,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 placeholder="DNI"
                 variant="standard"
                 InputProps={{
@@ -131,7 +125,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 type="password"
                 placeholder="Contraseña"
                 variant="standard"
@@ -146,7 +139,6 @@ const ModalRegister = () => {
 
             <TextField
                 sx={styles.input}
-                color="warning"
                 type="password"
                 placeholder="Repetir contraseña"
                 variant="standard"
