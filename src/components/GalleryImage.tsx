@@ -1,7 +1,7 @@
-import React from "react";
-import "../sass/GalleryImage.scss";
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
+import { uid } from "./utils/functions";
+import "../sass/GalleryImage.scss";
 
 interface IGalleryImageProps {
     source: string
@@ -13,10 +13,6 @@ interface IGalleryImageProps {
     peso: string
     precio: string
     handleAddItem: (nombre: string, precio: string, id: string) => void
-}
-
-const uid = (): string => {
-    return Date.now().toString(36) + Math.random().toString(36);
 }
 
 function GalleryImage(props: IGalleryImageProps){

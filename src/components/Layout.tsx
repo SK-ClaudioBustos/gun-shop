@@ -11,17 +11,19 @@ import dataSections from '../data/sections';
 import BuyMenu from './BuyMenu';
 
 const Layout = () => {
+  const [showUpButton, setshowUpButton] = useState<boolean>(false)
+  const [total, setTotal] = useState<number>(0);
   const [dialogState, setDialogState] = useState<DialogData>({ show: false, titulo: "" });
   const changeState = (props: DialogData) => {
     setDialogState({ ...props });
   }
-  const [showBuyMenu, setShowBuyMenu] = useState(false);
+  const [showBuyMenu, setShowBuyMenu] = useState<boolean>(false);
   const data = dataSections;
   const [itemList, setItemList] = useState<ItemCarrito[]>([]);
   const handleAddItem = (nombre: string, precio: string, id: string) => {
     setItemList([{ nombre, precio, id }, ...itemList]);
+    setTotal(total + Number(precio.replace(".", "")));
   }
-  const [showUpButton, setshowUpButton] = useState(false)
   window.onscroll = function () {
     const alturaPagina = window.scrollY;
     if (alturaPagina >= 300) {
@@ -40,7 +42,7 @@ const Layout = () => {
       }
       <ShopButton setShow={setShowBuyMenu} />
       {showBuyMenu &&
-        <BuyMenu itemList={itemList} show={showBuyMenu} setShowBuyMenu={setShowBuyMenu} setItemList={setItemList} />
+        <BuyMenu total={total} itemList={itemList} show={showBuyMenu} setTotal={setTotal} setShowBuyMenu={setShowBuyMenu} setItemList={setItemList} />
       }
       {
         data.map((section) => (

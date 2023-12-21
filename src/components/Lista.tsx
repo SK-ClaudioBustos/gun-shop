@@ -25,13 +25,19 @@ const style = {
 
 interface IListaProps {
   itemList: ItemCarrito[]
+  total: number
+  setTotal: React.Dispatch<React.SetStateAction<number>>
   setItemList: (value: React.SetStateAction<ItemCarrito[]>) => void
 }
 
 const Lista = (props: IListaProps) => {
-  const { itemList, setItemList } = props;
+  const { itemList, total, setTotal, setItemList } = props;
   const handleDelete = (id: string) => {
     setItemList(itemList.filter((item) => item.id !== id))
+    const item = itemList.find((item) => item.id === id);
+    if (item){
+      setTotal(total - Number(item.precio.replace(".", "")));
+    }
 }
   return (
     <List sx={style.list} component="nav" subheader={<li />} aria-label="items">
