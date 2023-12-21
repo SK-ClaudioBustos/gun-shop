@@ -3,6 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import Lista from "./Lista";
 import { ItemCarrito } from "../types";
 import "../sass/BuyMenu.scss";
+import { formatTotal } from "./utils/functions";
 
 interface IBuyMenuProps {
     show: boolean
@@ -23,7 +24,7 @@ const BuyMenu = (props: IBuyMenuProps) => {
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <Typography>
-                   {`Total $${total}`}
+                   {`Total $${formatTotal(total)}`}
                 </Typography>
                 <div className="shop-canvas-content">
                     <Lista total={total} itemList={itemList} setTotal={setTotal} setItemList={setItemList}/>
